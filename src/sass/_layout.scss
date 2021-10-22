@@ -1,8 +1,135 @@
-.splash {
-    height: 100vh;
-    background-image: url(../images/background.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
+@use "sass:math";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
+body {
+  background-color: $Color-dark;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .header {
+    padding-top: 494px;
+    padding-left: 60px;
+    padding-bottom: 464px;
+
+    h1 {
+      margin: 0;
+    }
+
+    h4 {
+      margin-top: 68px;
+      padding-right: 80px;
+    }
+  }
+
+  .main-nav {
+    display: flex;
+    justify-content: center;
+
+    a {
+      display: inline-block;
+
+      &:first-of-type {
+        padding-right: 135px;
+      }
+
+      &:nth-of-type(2) {
+        padding-right: 105px;
+      }
+    }
+  }
+}
+
+.container {
+  width: $Main-container-width;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 113px;
+  height: 1000px;
+
+
+  .song {
+    margin-top: 54px;
+    margin-bottom: 26px;
+    width: 582px;
+    height: 83px;
+  }
+
+  .tags {
+    p {
+      display: inline-block;
+    }
+
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.subscribe {
+  display: flex;
+  justify-content: center;
+  height: 1023px;
+  position: relative;
+  
+  h2 {
+    position: absolute;
+    top: -6%;
+    left: 49%;
+    transform: translate(-50%);
+  }
+
+  .wrapper {
+    position: relative;
+    padding-top: 169px;
+    // margin-left: $Girl-axis - math.div($Subscribe-container-width, 2);
+    width: $Subscribe-container-width;
+    display: grid;
+    grid-template: 578px 139px / 495px 735px;
+    justify-content: center;
+
+    .button.join {
+      margin-top: 353px;
+    }
+  
+    .album-artist {
+      position: absolute;
+      left: 33.5%;
+      top: 430px;
+    }
+  
+    .album-cover {
+      margin-right: 28px;
+      justify-self: right;
+    }
+
+    .album-title {
+      margin-top: 51px;
+
+      p {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+footer {
+  height: 90px;
+}

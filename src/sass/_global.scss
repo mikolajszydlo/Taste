@@ -1,0 +1,26 @@
+.splash {
+  background-image: url(../images/Warstwa_17.png), url(../images/background.jpg);
+  background-position: center center, center center;
+  background-size: cover, cover;
+}
+
+
+.subscribe {
+  background: url(../images/subscribe.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.button {
+  background-color: $Color-main;
+  width: 313px;
+  height: 133px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($Color-main, 10%);
+    border: 5px solid darken($Color-main, 20%);
+  }
+}

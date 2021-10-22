@@ -1,0 +1,1 @@
+new GreenAudioPlayer('.song'); // eslint-disable-line no-undef

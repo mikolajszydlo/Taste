@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>TASTE</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <title>TASTE</title>
 </head>
 <body>
-    <header class="splash"></header>
-    <section class="home"></section>
+  <header class="splash">
+    <div class="header">
+      <h1>Taste</h1>
+      <h4>Engage<br>in<br>art</h4>
+    </div>
+    <div class="main-nav container">
+      <a href="#home">Home</a>
+      <a href="#search">Search</a>
+      <a href="#discover">Discover</a>
+    </div>
+  </header>
+  <main>
+    <section class="home">
+      <div class="container">
+        <h5><span class="artist">Dawid Renda</span> - At the top</h5>
+        <div class="song">
+          <audio src="./db/songs/At_The_Top_David_Renda.mp3" type="audio/mp3"></audio>
+        </div>
+        <div class="tags">
+          <p class="category">Categories: Slow, melancholy</p>
+          <p class="ranking">#25 in the ranking</p>
+        </div>
+      </div>
+    </section>
     <section class="search"></section>
-    <section class="subscribe"></section>
-    <footer></footer>
+    <section class="discover"></section>
+
+    <section class="subscribe">
+      <h2>Subscribe <span>now</span></h2>
+      <div class="wrapper">
+        <button class="button join" type="button">Join now</button>
+        <div class="album-artist"><p>Dean</p><p>Hen<span>son</span></p></div>
+        <img class="album-cover" src="./images/artist.jpg" alt="Dean Hanson new album cover">
+        <div class="album-title">
+          <h3>New album</h3>
+          <p>Available only for subsribes</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>All rights reserved</footer>
+  <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
+  <script src="./js/app.js" type="module"></script>
 </body>
 </html>

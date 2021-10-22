@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+@font-face {
+  font-family: 'Source Sans Pro - Black';
+  src: url('../vendor/fonts/SourceSansPro-Black.woff2') format('woff2');
+};
+
+@font-face           {
+  font-family: 'Source Sans Pro - Semibold';
+  src: url('../vendor/fonts/SourceSansPro-Semibold.woff2') format('woff2');
+};
 
 /* Colors */
 $Color-main: #cf383e;
@@ -7,14 +16,18 @@ $Color-grey: #bfbfbf;
 $Color-dark: #131313;
 
 /* Fonts */
-$font-family: 'Source Sans Pro', sans-serif;
-$weight-normal: 400;
-$weight-bold: 700;
-$letter-spacing: 7.5px;
+$Text-font: 'Source Sans Pro', sans-serif;
+$Main-header-font: 'Source Sans Pro - Black', sans-serif;
+$Nav-header-font: 'Source Sans Pro - Semibold', sans-serif;
 
-@font-face {
-    font-family: 'MyWebFont';
-    src: url('myfont.woff2') format('woff2');
-  }
+$Weight-normal: 400;
+$Weight-semi-bold: 600;
+$Weight-bold: 700;
+$Weight-extra-bold: 900;
+$Letter-spacing: 8px;
 
+/* Positions, dimensions */
+// $Girl-axis: 49%;
+$Main-container-width: 575px;
+$Subscribe-container-width: 64.1%;
 

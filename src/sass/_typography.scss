@@ -1,0 +1,108 @@
+h1 {
+  color: $Color-light;
+  font-weight: $Weight-extra-bold;
+  font-family: $Main-header-font;
+  font-size: 200px;
+  letter-spacing: 120px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  color: $Color-light;
+  font-family: $Text-font;
+  font-size: 100px;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+}
+
+h3 {
+  color: $Color-grey;
+  font-size: 40px;
+  font-family: $Text-font;
+  font-weight: $Weight-bold;
+  letter-spacing: $Letter-spacing;
+  text-transform: uppercase;
+}
+
+h4 {
+  color: $Color-light;
+  font-weight: $Weight-extra-bold;
+  font-family: $Main-header-font;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 10.8px;
+  line-height: 72px;
+  text-align: center;
+}
+
+h5 {
+  color: $Color-light;
+  font-weight: $Weight-semi-bold;
+  font-family: $Nav-header-font;
+  font-size: 30px;
+  letter-spacing: 2.25px;
+  text-align: center;
+
+  .artist {
+    text-transform: uppercase;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $Color-grey;
+  font-size: 20px;
+  font-family: $Nav-header-font;
+  font-weight: $Weight-normal;
+  letter-spacing: 2.25px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+footer {
+  color: $Color-grey;
+  font-family: $Text-font;
+  font-weight: $Weight-normal;
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.home {
+  p {
+    color: $Color-grey;
+    font-family: $Text-font;
+    font-weight: $Weight-normal;
+    font-size: 20px;
+  }
+}
+
+.album-title {
+  p {
+    color: $Color-light;
+    font-size: 40px;
+    font-family: $Text-font;
+    font-weight: $Weight-semi-bold;
+    letter-spacing: $Letter-spacing;
+  }
+}
+
+.album-artist p {
+  margin: 0;
+  font-size: 100px;
+  font-weight: $Weight-extra-bold;
+  font-family: $Main-header-font;
+  color: $Color-light;
+  letter-spacing: 20px;
+}
+
+.button {
+  color: $Color-light;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  font-weight: $Weight-bold;
+  font-size: 40px;
+  font-family: $Text-font;
+}
+

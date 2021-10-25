@@ -1,61 +1,74 @@
 @use "sass:math";
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 body {
   background-color: $Color-dark;
 }
 
 footer {
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.container {
+  width: min(90%, $Main-container-width);
+  margin-inline: auto;
+}
+
+.container--narrow {
+  max-width: $Narrow-container-width;
+  margin-inline: auto;
+}
+
+.container--wide {
+  width: min(90%, $Wide-container-width);
+  margin-inline: auto;
+}
+
 .splash {
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
+
   .header {
-    padding-top: 494px;
-    padding-left: 60px;
-    padding-bottom: 464px;
+    padding-top: 27rem;
 
-    h1 {
-      margin: 0;
-    }
-
-    h4 {
-      margin-top: 68px;
-      padding-right: 80px;
-    }
-  }
-
-  .main-nav {
-    display: flex;
-    justify-content: center;
-
-    a {
-      display: inline-block;
-
-      &:first-of-type {
-        padding-right: 135px;
+    @media screen and (max-width: 768px) {
+      padding-top: 30rem;
+  
+      div {
+        padding-top: 5rem;
       }
-
-      &:nth-of-type(2) {
-        padding-right: 105px;
-      }
-    }
+    }  
   }
 }
 
-.container {
-  width: $Main-container-width;
+.main-nav {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+  a {
+    display: inline-block;
+  }
+  
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  
+    a {
+      &:first-of-type {
+        padding-right: 0rem;
+      }
+    
+      &:nth-of-type(2) {
+        padding-right: 0rem;
+      }
+    }
+  }
 }
 
 .home {
@@ -65,27 +78,25 @@ footer {
   margin-top: 113px;
   height: 1000px;
 
-
   .song {
     margin-top: 54px;
     margin-bottom: 26px;
-    width: 582px;
+    width: min(90%, 582px);
     height: 83px;
   }
 
   .tags {
+    width: 92%;
+    display: flex;
+    justify-content: space-between;
+
     p {
       display: inline-block;
     }
-
-    display: flex;
-    justify-content: space-between;
   }
 }
 
 .subscribe {
-  display: flex;
-  justify-content: center;
   height: 1023px;
   position: relative;
   
@@ -97,39 +108,83 @@ footer {
   }
 
   .wrapper {
-    position: relative;
-    padding-top: 169px;
-    // margin-left: $Girl-axis - math.div($Subscribe-container-width, 2);
-    width: $Subscribe-container-width;
-    display: grid;
-    grid-template: 578px 139px / 495px 735px;
-    justify-content: center;
+    padding-top: 16.9rem;
+  
+    .button {
+      margin-top: 40.6rem;
+    }
 
-    .button.join {
-      margin-top: 353px;
-    }
-  
-    .album-artist {
-      position: absolute;
-      left: 33.5%;
-      top: 430px;
-    }
-  
     .album-cover {
-      margin-right: 28px;
-      justify-self: right;
+      display: flex;
+      position: relative;
+      justify-content: end;
+  
+      .album-artist {
+        position: absolute;
+        top: 294px;
+        left: 78px;
+      }
+
+      img {
+        padding-right: 28px;
+        max-width: 100%;
+        object-fit: cover;
+      }
+
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    img {padding-right: 0px;}
+
+    .wrapper {padding-top: 5rem;}
+
+    .button {margin-top: 1rem;}
+
+    .album-cover {justify-content: center;}
+
+    .album-artist {
+      left: 50%;
+      top: 5%;
+      transform: translate(-50%);
     }
 
     .album-title {
-      margin-top: 51px;
+      p {font-size: 2.7rem;}}
+  }
+}  
 
-      p {
-        margin-top: 8px;
-      }
-    }
+.row {
+  display: flex;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-footer {
-  height: 90px;
-}
+.col {padding: 15px;}
+
+.col-1 {flex: 8.333%;}
+
+.col-2 {flex: 16.667%;}
+
+.col-3 {flex: 25%;}
+
+.col-4 {flex: 33.333%;}
+
+.col-5 {flex: 41.667%;}
+
+.col-6 {flex: 50%;}
+
+.col-7 {flex: 58.333%;}
+
+.col-8 {flex: 66.667%;}
+
+.col-9 {flex: 75%;}
+
+.col-10 {flex: 83.333%;}
+
+.col-11 {flex: 91.667%;}
+
+.col-12 {flex: 100%;}

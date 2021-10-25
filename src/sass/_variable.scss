@@ -4,7 +4,7 @@
   src: url('../vendor/fonts/SourceSansPro-Black.woff2') format('woff2');
 };
 
-@font-face           {
+@font-face                         {
   font-family: 'Source Sans Pro - Semibold';
   src: url('../vendor/fonts/SourceSansPro-Semibold.woff2') format('woff2');
 };
@@ -24,10 +24,11 @@ $Weight-normal: 400;
 $Weight-semi-bold: 600;
 $Weight-bold: 700;
 $Weight-extra-bold: 900;
-$Letter-spacing: 8px;
+$Letter-spacing: .8rem;
 
 /* Positions, dimensions */
 // $Girl-axis: 49%;
-$Main-container-width: 575px;
-$Subscribe-container-width: 64.1%;
+$Main-container-width: 57.5rem;
+$Narrow-container-width: 22rem;
+$Wide-container-width: 123rem;
 

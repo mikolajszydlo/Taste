@@ -7,23 +7,44 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  background-color: $Color-dark;
+}
+
+#pages {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
 .splash {
   background-image: url(../images/Warstwa_17.png), url(../images/background.jpg);
-  background-position: center center, center center;
   background-size: cover, cover;
+  background-position: center bottom, center center;
   background-attachment: fixed, fixed;
 }
 
-
 .subscribe {
+  display: none;
   background: url(../images/subscribe.jpg);
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-
 }
 
-.button {
+.subscribe.active {
+  display: block;
+}
+
+.green-audio-player {
+  width: 100%;
+}
+
+.btn {
   background-color: $Color-main;
   width: 313px;
   height: 133px;
@@ -40,4 +61,20 @@ html {
     max-width: 100%;
     height: 70px;
   }
+}
+
+.btn-secondary {
+  width: 139px;
+  height: 59px;
+  border-radius: 9px;
+}
+
+input {
+  width: 355px;
+  height: 59px;
+  border-radius: 9px;
+}
+/* Audio player pin progress */
+.green-audio-player .controls .slider .gap-progress .pin {
+  background-color: $Color-main;
 }

@@ -11,7 +11,7 @@
       "declaration-block-trailing-semicolon": "always",
       "indentation": 2,
       "max-empty-lines": 2,
-      "max-nesting-depth": [3, {
+      "max-nesting-depth": [5, {
         "ignore": ["pseudo-classes"]
       }],
       "rule-empty-line-before": [ "always", {

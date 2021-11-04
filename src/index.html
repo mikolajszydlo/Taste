@@ -23,23 +23,30 @@
       <a href="#search">Search</a>
       <a href="#discover">Discover</a>
     </nav>
-    <section class="home container">
-      <h5><span class="artist">Dawid Renda</span> - At the top</h5>
-      <div class="song">
-        <audio src="./db/songs/At_The_Top_David_Renda.mp3" type="audio/mp3"></audio>
-      </div>
-      <div class="tags">
-        <p class="category">Categories: Slow, melancholy</p>
-        <p class="ranking">#25 in the ranking</p>
-      </div>
+    <section id="pages">
+      <article id="home">
+        <div class="home container">
+        </div>
+      </article>
+      <article id="search" class="container--wide">
+        <form action="form">
+          <label for="search-name">Name</label>
+          <input type="text" id="search-phrase" name="search-phrase">
+          <button id="search-button" type="submit" class="btn btn-secondary">Search</button>
+        </form>
+        <p class="found">We have found <span id="songs-amount"></span> songs...</p>
+        <div class="search container"></div>
+      </article>
+      <article id="discover"><div class="discover container">
+        <h3>Discover</h3>
+        <p class="try">Give it a try!</p>
+      </div></article>
     </section>
-    <section class="search"></section>
-    <section class="discover"></section>
     <section class="subscribe">
       <div class="wrapper container--wide">
         <h2>Subscribe <span class="now">now</span></h2>
         <div class="row">
-          <div class="col col-3"><button class="button" type="button">Join now</button></div>
+          <div class="col col-3"><button type="button" class="btn" onclick="window.location.href='/join-now'">Join now</button></div>
           <div class="col col-9 album-cover">
             <div class="album-artist"><p>Dean</p><p>Hen<span>son</span></p></div>
             <img src="./images/artist.jpg" alt="Dean Hanson new album cover">

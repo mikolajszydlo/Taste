@@ -1,69 +1,56 @@
-h1 {
+body {
+  font-family: $Main-font;
   color: $Color-light;
-  font-weight: $Weight-extra-bold;
-  font-family: $Main-header-font;
+  font-weight: $Weight-regular;
+}
+
+/* Taste header */
+h1 {
+  font-weight: $Weight-black;
   font-size: 20rem;
   letter-spacing: 12rem;
+  text-indent: 9rem;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  @media screen and (max-width: 768px) {
-    font-size: 5rem;
-    letter-spacing: 3rem;
-    padding-left: .5rem;
-  }
 }
 
+/* Subscribe header */
 h2 {
-  color: $Color-light;
-  font-family: $Nav-header-font;
   font-weight: $Weight-semi-bold;
   font-size: 10rem;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 2rem;
   text-align: center;
 
   .now {
-    font-family: $Main-header-font;
-    font-weight: $Weight-extra-bold;
-  }
-
-  @media screen and (max-width: 768px) {
-    font-size: 5rem;
+    font-weight: $Weight-black;
   }
 }
 
+/* New album header */
 h3 {
   color: $Color-grey;
   font-size: 4rem;
-  font-family: $Text-font;
   font-weight: $Weight-bold;
   letter-spacing: $Letter-spacing;
   text-transform: uppercase;
-  @media screen and (max-width: 768px) {
-    font-size: 3rem;
-  }
 }
 
+/* Engage header */
 h4 {
-  color: $Color-light;
-  font-weight: $Weight-extra-bold;
-  font-family: $Main-header-font;
+  font-weight: $Weight-black;
   word-spacing: $Narrow-container-width;
   font-size: 3.6rem;
   text-transform: uppercase;
   letter-spacing: 1.08rem;
   line-height: 7.2rem;
   text-align: center;
-  @media screen and (max-width: 768px) {
-    font-size: 2.7rem;
-  }
 }  
 
-h5 {
-  color: $Color-light;
+/* Audio artist header, found songs summary*/
+h5, .found, .try {
   font-weight: $Weight-semi-bold;
-  font-family: $Nav-header-font;
   font-size: 3rem;
   letter-spacing: .225rem;
   text-align: center;
@@ -73,67 +60,114 @@ h5 {
   }
 }
 
-a {
-  text-decoration: none;
-  color: $Color-grey;
-  font-size: 2rem;
-  font-family: $Nav-header-font;
-  font-weight: $Weight-normal;
-  letter-spacing: 0.225rem;
-  text-transform: uppercase;
-  text-align: left;
+/* Navigation */
+.main-nav {
+  a {
+    text-decoration: none;
+    color: $Color-grey;
+    font-size: 2rem;
+    letter-spacing: 0.225rem;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .active {
+    color: $Color-light;
+  }
 }
 
 footer {
   color: $Color-grey;
-  font-family: $Text-font;
-  font-weight: $Weight-normal;
   font-size: 2rem;
   letter-spacing: .4rem;
   text-align: center;
 }
 
-.home {
-  p {
-    color: $Color-grey;
-    font-family: $Text-font;
-    font-weight: $Weight-normal;
-    font-size: 2rem;
-  }
+/* Search form */
+label {
+  color: $Color-grey;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
 }
 
+// .found {
+//   font-size: 2rem;
+//   letter-spacing: 0.5rem;
+// }
+
+/* Categories */
+.tags {
+  color: $Color-grey;
+  font-size: 2rem;
+}
+
+/* Artist */
 .album-title {
   p {
-    color: $Color-light;
     font-size: 4rem;
-    font-family: $Text-font;
     font-weight: $Weight-semi-bold;
     letter-spacing: $Letter-spacing;
-    @media screen and (max-width: 768px) {
-      font-size: 3rem;
-    }
   }
 }
 
 .album-artist p {
   margin: 0;
   font-size: 10rem;
-  font-weight: $Weight-extra-bold;
-  font-family: $Main-header-font;
-  color: $Color-light;
+  font-weight: $Weight-black;
   letter-spacing: 2rem;
-  @media screen and (max-width: 768px) {
-    font-size: 4rem;
-    letter-spacing: 1rem;
-  }
 }
 
-.button {
+.btn {
   color: $Color-light;
   letter-spacing: .8rem;
   text-transform: uppercase;
   font-weight: $Weight-bold;
   font-size: 4rem;
-  font-family: $Text-font;
-  @media screen and (max-width: 768px) {font-size: 3rem;}
+}
+
+.btn-secondary {
+  font-size: 1.5rem;
+  text-indent: .8rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  /* Taste header */
+  h1 {
+    font-size: 10rem;
+    letter-spacing: 3rem;
+    padding-left: .5rem;
+    text-indent: 2rem;
+  }
+  /* Subscribe header */
+  h2 {
+    font-size: 5rem;
+  }
+
+  /* New album header */
+  h3 {
+    font-size: 3rem;
+  }
+
+  /* Engage header */
+  h4 {
+    font-size: 2.7rem;
+  }
+
+  .album-title {
+    p {
+      font-size: 3rem;
+    }
+  }
+
+  .album-artist {
+    p {
+      font-size: 4rem;
+      letter-spacing: 1rem;
+    }
+  }
+
+  .btn {
+    font-size: 3rem;
+  }
 }

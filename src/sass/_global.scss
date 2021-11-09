@@ -46,8 +46,8 @@ body {
 
 .btn {
   background-color: $Color-main;
-  width: 313px;
-  height: 133px;
+  width: 100%;
+  height: 77px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -56,25 +56,37 @@ body {
     background-color: darken($Color-main, 10%);
     border: 5px solid darken($Color-main, 20%);
   }
-
-  @media screen and (max-width: 375px) {
-    max-width: 100%;
-    height: 70px;
-  }
 }
 
 .btn-secondary {
-  width: 139px;
+  width: 100%;
   height: 59px;
   border-radius: 9px;
 }
 
 input {
-  width: 355px;
+  width: 100%;
   height: 59px;
   border-radius: 9px;
 }
+
 /* Audio player pin progress */
 .green-audio-player .controls .slider .gap-progress .pin {
   background-color: $Color-main;
+}
+
+/* Large screen view */
+@media (min-width: 1200px) {
+  input {
+    width: 355px;
+  }
+
+  .btn {
+    height: 133px;
+  }
+
+  .btn-secondary {
+    width: 139px;
+    height: 59px;
+  }
 }

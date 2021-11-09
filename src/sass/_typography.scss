@@ -4,24 +4,28 @@ body {
   font-weight: $Weight-regular;
 }
 
-/* Taste header */
-h1 {
-  font-weight: $Weight-black;
-  font-size: 20rem;
-  letter-spacing: 12rem;
-  text-indent: 9rem;
+@mixin header-font {
   text-transform: uppercase;
   text-align: center;
+}
+
+/* Taste header */
+h1 {
+  @include header-font;
+  font-weight: $Weight-black;
+  font-size: 6rem;
+  letter-spacing: 3rem;
+  padding-left: .5rem;
+  text-indent: 2rem;
   margin: 0;
 }
 
 /* Subscribe header */
 h2 {
+  @include header-font;
   font-weight: $Weight-semi-bold;
-  font-size: 10rem;
-  text-transform: uppercase;
+  font-size: 3.5rem;
   letter-spacing: 2rem;
-  text-align: center;
 
   .now {
     font-weight: $Weight-black;
@@ -31,7 +35,7 @@ h2 {
 /* New album header */
 h3 {
   color: $Color-grey;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: $Weight-bold;
   letter-spacing: $Letter-spacing;
   text-transform: uppercase;
@@ -39,13 +43,12 @@ h3 {
 
 /* Engage header */
 h4 {
+  @include header-font;
   font-weight: $Weight-black;
-  word-spacing: $Narrow-container-width;
-  font-size: 3.6rem;
-  text-transform: uppercase;
+  word-spacing: $Narrow-container-width; // every word in a new line
+  font-size: 2.7rem;
+  line-height: 5rem;
   letter-spacing: 1.08rem;
-  line-height: 7.2rem;
-  text-align: center;
 }  
 
 /* Audio artist header, found songs summary*/
@@ -80,7 +83,6 @@ footer {
   color: $Color-grey;
   font-size: 2rem;
   letter-spacing: .4rem;
-  text-align: center;
 }
 
 /* Search form */
@@ -99,12 +101,16 @@ label {
 .tags {
   color: $Color-grey;
   font-size: 2rem;
+
+  p:last-of-type{
+    text-align: end;
+  }
 }
 
 /* Artist */
 .album-title {
   p {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: $Weight-semi-bold;
     letter-spacing: $Letter-spacing;
   }
@@ -112,9 +118,9 @@ label {
 
 .album-artist p {
   margin: 0;
-  font-size: 10rem;
+  font-size: 6rem;
+  letter-spacing: 1rem;
   font-weight: $Weight-black;
-  letter-spacing: 2rem;
 }
 
 .btn {
@@ -122,7 +128,7 @@ label {
   letter-spacing: .8rem;
   text-transform: uppercase;
   font-weight: $Weight-bold;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .btn-secondary {
@@ -130,44 +136,75 @@ label {
   text-indent: .8rem;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
+/* Medium screen view */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 15rem;
+    letter-spacing: 8rem;
+    text-indent: 6rem;
+  }
+
+  h2 {
+    font-size: 7.5rem;
+  }
+
+  .album-artist {
+    p {
+      font-size: 7.5rem;
+      letter-spacing: 1.75rem;
+    }
+  }
+}
+
+/* Large screen view */
+@media (min-width: 1200px) {
   /* Taste header */
   h1 {
-    font-size: 10rem;
-    letter-spacing: 3rem;
-    padding-left: .5rem;
-    text-indent: 2rem;
+    font-size: 20rem;
+    letter-spacing: 12rem;
+    text-indent: 9rem;
   }
   /* Subscribe header */
   h2 {
-    font-size: 5rem;
+    font-size: 10rem;
   }
 
   /* New album header */
   h3 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   /* Engage header */
   h4 {
-    font-size: 2.7rem;
+    font-size: 3.6rem;
+    line-height: 7.2rem;
   }
 
   .album-title {
     p {
-      font-size: 3rem;
+      font-size: 4rem;
     }
   }
 
   .album-artist {
     p {
-      font-size: 4rem;
-      letter-spacing: 1rem;
+      font-size: 10rem;
+      letter-spacing: 2rem;
+    }
+  }
+
+  /* Categories */
+  .tags {
+    p:last-of-type{
+      text-align: left;
     }
   }
 
   .btn {
-    font-size: 3rem;
+    font-size: 4rem;
+  }
+
+  .btn-secondary {
+    font-size: 1.5rem;
   }
 }

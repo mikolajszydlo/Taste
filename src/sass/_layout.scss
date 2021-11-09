@@ -144,17 +144,17 @@ footer {
 }
 
 .container {
-  width: min(90%, $Main-container-width);
+  width: min(90%, $main-container-width);
   margin-inline: auto;
 }
 
 .container--narrow {
-  max-width: $Narrow-container-width;
+  max-width: $narrow-container-width;
   margin-inline: auto;
 }
 
 .container--wide {
-  width: min(90%, $Wide-container-width);
+  width: min(90%, $wide-container-width);
   margin-inline: auto;
 }
 

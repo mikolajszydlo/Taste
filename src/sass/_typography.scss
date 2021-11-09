@@ -1,7 +1,7 @@
 body {
-  font-family: $Main-font;
-  color: $Color-light;
-  font-weight: $Weight-regular;
+  font-family: $main-font;
+  color: $color-light;
+  font-weight: $weight-regular;
 }
 
 @mixin header-font {
@@ -12,7 +12,7 @@ body {
 /* Taste header */
 h1 {
   @include header-font;
-  font-weight: $Weight-black;
+  font-weight: $weight-black;
   font-size: 6rem;
   letter-spacing: 3rem;
   padding-left: .5rem;
@@ -23,37 +23,37 @@ h1 {
 /* Subscribe header */
 h2 {
   @include header-font;
-  font-weight: $Weight-semi-bold;
+  font-weight: $weight-semi-bold;
   font-size: 3.5rem;
   letter-spacing: 2rem;
 
   .now {
-    font-weight: $Weight-black;
+    font-weight: $weight-black;
   }
 }
 
 /* New album header */
 h3 {
-  color: $Color-grey;
+  color: $color-grey;
   font-size: 3rem;
-  font-weight: $Weight-bold;
-  letter-spacing: $Letter-spacing;
+  font-weight: $weight-bold;
+  letter-spacing: $letter-spacing;
   text-transform: uppercase;
 }
 
 /* Engage header */
 h4 {
   @include header-font;
-  font-weight: $Weight-black;
-  word-spacing: $Narrow-container-width; // every word in a new line
+  font-weight: $weight-black;
+  word-spacing: $narrow-container-width;
   font-size: 2.7rem;
   line-height: 5rem;
   letter-spacing: 1.08rem;
 }  
 
-/* Audio artist header, found songs summary*/
+/* Audio artist header, found songs summary */
 h5, .found, .try {
-  font-weight: $Weight-semi-bold;
+  font-weight: $weight-semi-bold;
   font-size: 3rem;
   letter-spacing: .225rem;
   text-align: center;
@@ -67,7 +67,7 @@ h5, .found, .try {
 .main-nav {
   a {
     text-decoration: none;
-    color: $Color-grey;
+    color: $color-grey;
     font-size: 2rem;
     letter-spacing: 0.225rem;
     text-transform: uppercase;
@@ -75,31 +75,26 @@ h5, .found, .try {
   }
 
   .active {
-    color: $Color-light;
+    color: $color-light;
   }
 }
 
 footer {
-  color: $Color-grey;
+  color: $color-grey;
   font-size: 2rem;
   letter-spacing: .4rem;
 }
 
 /* Search form */
 label {
-  color: $Color-grey;
+  color: $color-grey;
   font-size: 2rem;
   letter-spacing: 0.5rem;
 }
 
-// .found {
-//   font-size: 2rem;
-//   letter-spacing: 0.5rem;
-// }
-
 /* Categories */
 .tags {
-  color: $Color-grey;
+  color: $color-grey;
   font-size: 2rem;
 
   p:last-of-type{
@@ -111,8 +106,8 @@ label {
 .album-title {
   p {
     font-size: 3rem;
-    font-weight: $Weight-semi-bold;
-    letter-spacing: $Letter-spacing;
+    font-weight: $weight-semi-bold;
+    letter-spacing: $letter-spacing;
   }
 }
 
@@ -120,14 +115,14 @@ label {
   margin: 0;
   font-size: 6rem;
   letter-spacing: 1rem;
-  font-weight: $Weight-black;
+  font-weight: $weight-black;
 }
 
 .btn {
-  color: $Color-light;
+  color: $color-light;
   letter-spacing: .8rem;
   text-transform: uppercase;
-  font-weight: $Weight-bold;
+  font-weight: $weight-bold;
   font-size: 3rem;
 }
 

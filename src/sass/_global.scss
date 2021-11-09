@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  background-color: $Color-dark;
+  background-color: $color-dark;
 }
 
 #pages {
@@ -45,7 +45,7 @@ body {
 }
 
 .btn {
-  background-color: $Color-main;
+  background-color: $color-main;
   width: 100%;
   height: 77px;
   border-radius: 5px;
@@ -53,8 +53,8 @@ body {
   cursor: pointer;
 
   &:hover {
-    background-color: darken($Color-main, 10%);
-    border: 5px solid darken($Color-main, 20%);
+    background-color: darken($color-main, 10%);
+    border: 5px solid darken($color-main, 20%);
   }
 }
 
@@ -72,7 +72,7 @@ input {
 
 /* Audio player pin progress */
 .green-audio-player .controls .slider .gap-progress .pin {
-  background-color: $Color-main;
+  background-color: $color-main;
 }
 
 /* Large screen view */
